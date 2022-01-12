@@ -44,12 +44,13 @@ def filesContainText(searchTerm):
 
     # if we found files then output them and write them to a file
     if len(foundFiles) != 0:
+        print("\n")
         resultsFile = open("results.txt", "a")
         resultsFile.write(f"Search Term: {searchTerm}\n\n")
 
         for i in range (0, len(foundFiles)):
             resultsFile.write(foundFiles[i]+ "\n")
-            print("Found In:" + foundFiles[i])
+            print("Found In: " + foundFiles[i])
 
         resultsFile.write("\n\n")
         resultsFile.close()
@@ -62,7 +63,7 @@ def filesContainText(searchTerm):
 if __name__ == "__main__":
 
     # create vars for later use
-    shouldCreateDownloadList, shouldDownload  = '', ''
+    shouldCreateDownloadList, shouldDownload  = ' ', ' '
 
     #check if there is a download-list file, if not ask if they want one
     if not "download-list" in os.listdir():
@@ -101,4 +102,3 @@ if __name__ == "__main__":
 
         print("Begining Search: ")
         filesContainText(searchTerm)
-
