@@ -1,0 +1,5 @@
+.dist
+*.csv
+results.txt
+files
+download-list
