@@ -54,7 +54,9 @@ def filesContainText(searchTerm):
 
         resultsFile.write("\n\n")
         resultsFile.close()
-        print("Results also in results.txt file")
+        print("\nResults also in results.txt file")
+        print("\n\n-----------------------------\n\n")
+
     
     else:
         print("Not Found") # didn't find anything
@@ -90,7 +92,7 @@ if __name__ == "__main__":
     
     # if we should download then download the files in the download-list
     if(shouldDownload == '' or shouldDownload.lower() == 'y'):
-        os.system("wget -P ~/Desktop/websearch/files -i download-list")
+        os.system("wget -P ./files -i download-list")
         print("\n\n-----------------------------\n\n")
 
     # loop for consecutive searches
